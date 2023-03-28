@@ -11,15 +11,13 @@ body {
     flex-direction: column;
     background-color: #C8B2A6;
 }
-.main-form{
-    width: 60%;
-    margin: auto;
+.main-form{   
     background: rgb(0, 0, 0);
     position:center;
     align-self: center;
-    top: 50rem;
     display:flex;
     flex-direction: row;
+    margin:auto;   
 }
 .left-side{
     background: #030303;
