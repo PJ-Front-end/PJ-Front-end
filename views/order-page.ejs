@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>ORDER</title>
+  <link rel="stylesheet" href="/public/css/order.css">
+  <a href="/public/css/order.css"></a>
+  
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+  <!-- Latest compiled JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+
+</head>
+<body>
+<div class="mainscreen">
+    <div class="card">
+      <div class="leftside">
+        <i class="ri-arrow-left-s-line"></i>
+        <img src=<%= product1.image %> class="product" alt="Shoes" />
+      </div>
+      <div class="rightside">
+        <form action=>
+          <header class="price"><%= product1.price %> <small>THB</small></header>
+          <h2><%= product1.name %></h2>
+          <p><%= product1.description %></p>
+          <div class="btn">
+            <p class="amount"><minus> - &nbsp</minus>  1  <plus>&nbsp + </plus></p>
+            <button class="buy-btn">Buy Now</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    </div> 
+</body>
+</html>

@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+body {
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+    background-color: #C8B2A6;
+}
+*{
+    font-family: 'Roboto Slab', serif;
+}
+
+.mainscreen
+{
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card {
+	width: 60rem;
+    margin: auto;
+    position:center;
+    align-self: center;
+    top: 50rem;
+    border-radius: 1.5rem;
+    box-shadow: 4px 3px 20px #3535358c;
+    display:flex;
+    flex-direction: row;
+    
+}
+
+.leftside {
+	background: #f3dcc1;
+    height: 90vh;
+	width: 25rem;
+	display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.product {
+    object-fit: cover;
+    margin: 5%;
+	width: 100%;
+    height: 100%;
+    border-radius:10px;
+}
+
+.rightside {
+    background-color: black;
+	width: 35rem;
+    padding: 2rem;
+    color: aliceblue;
+}
+header{
+    font-size: 500%;
+    margin: 5%;
+    text-align: end;
+}
+header small{
+    font-size: 30%;
+}
+.rightside h2{
+    font-size: 300%;
+    color:#D08E43 ;
+    margin: 1.5rem;
+} 
+.rightside p{
+    margin-left: 1.5rem;
+    font-size: 150%;
+}
+.btn{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10%;
+}
+.btn .amount{
+    font-size: 250%;
+
+}
+minus{
+    cursor: pointer;
+
+}
+plus{
+    cursor: pointer;   
+}
+.buy-btn{
+    width: 60%;
+    height: 100px;
+    border-radius: 25px;
+    font-size: 150%;
+    background-color: #D08E43;
+    color: whitesmoke;
+    margin-left: 5%;
+    cursor: pointer;
+}
+.ri-arrow-left-s-line{
+    position: absolute;
+    color: #ffffff;
+    font-size: 4rem;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+}
+
+
+
+
+@media only screen and (max-width: 1000px) {
+    .card{
+        flex-direction: column;
+        width: 80%; 
+      
+    }
+
+    .leftside{
+        width: 100%;
+        height: 40vh;
+    }
+
+    .rightside{
+        width:auto;
+        padding:2rem;
+    }
+}
