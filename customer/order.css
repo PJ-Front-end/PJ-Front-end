@@ -1,107 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 body {
 	margin:0;
 	padding:0;
 	box-sizing: border-box;
     background-color: #C8B2A6;
 }
-.mainscreen{
-    min-height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    background-color: #C8B2A6;
+*{
+    font-family: 'Roboto Slab', serif;
 }
-.main-form{   
-    background: rgb(0, 0, 0);
+
+.mainscreen
+{
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card {
+	width: 60rem;
+    margin: auto;
     position:center;
     align-self: center;
+    top: 50rem;
+    border-radius: 1.5rem;
+    box-shadow: 4px 3px 20px #3535358c;
     display:flex;
     flex-direction: row;
-    margin:auto;   
+    
 }
-.left-side{
-    background: #030303;
+
+.leftside {
+	background: #f3dcc1;
+    height: 90vh;
 	width: 25rem;
 	display: inline-flex;
     align-items: center;
     justify-content: center;
-}
-.img-product{
-    object-fit: cover;
-    margin: 0%;
-    width: 100%;
-    max-height: 100%;
-	
-}
-.right-side{
     position: relative;
+}
+
+.product {
+    object-fit: cover;
+    margin: 5%;
+	width: 100%;
+    height: 100%;
+    border-radius:10px;
+}
+
+.rightside {
+    background-color: black;
 	width: 35rem;
     padding: 2rem;
+    color: aliceblue;
 }
-.price{
-    position: absolute;
-    right: 10%;
-    margin-top: 10%;
-    color: white;
-    font-size: 3.5rem;
-    font-weight: 600;
+header{
+    font-size: 500%;
+    margin: 5%;
+    text-align: end;
 }
-.price>small{
-    font-size: 2rem;
+header small{
+    font-size: 30%;
 }
-.menu{
-    margin-top: 15%;
-    margin-left: 5%;
-}
-.menu>h2{
-    color: #CE8F57;
-    margin-bottom: 20px;
-    font-size: 3.5rem;
-}
-.menu>p{
-    color: white;
-    font-size: 1.5rem;
+.rightside h2{
+    font-size: 300%;
+    color:#D08E43 ;
+    margin: 1.5rem;
+} 
+.rightside p{
+    margin-left: 1.5rem;
+    font-size: 150%;
 }
 .btn{
     display: flex;
+    justify-content: space-around;
     align-items: center;
-    width: 80%;
-    column-gap: 10%;
+    margin-top: 10%;
 }
-.amount{
-    width: 50%;
-    color: white;
-    font-size: 1.5em;
-    font-weight: 600;
-    margin: 2px;
+.btn .amount{
+    font-size: 250%;
+
+}
+minus{
+    cursor: pointer;
+
+}
+plus{
+    cursor: pointer;   
 }
 .buy-btn{
-    width: 80%;
-    border-radius: 0.5rem;
-    padding: 10px 0px 10px 0px ;
-    background-color:  #CE8F57;
-    color: aliceblue;
-    border: rgb(243, 239, 231) solid 1px;
+    width: 60%;
+    height: 100px;
+    border-radius: 25px;
+    font-size: 150%;
+    background-color: #D08E43;
+    color: whitesmoke;
+    margin-left: 5%;
+    cursor: pointer;
 }
+.ri-arrow-left-s-line{
+    position: absolute;
+    color: #ffffff;
+    font-size: 4rem;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+}
+
+
+
+
 @media only screen and (max-width: 1000px) {
-    .main-form{
+    .card{
         flex-direction: column;
-        width: auto;
-        min-height: 100%;
+        width: 80%; 
+      
     }
 
-    .left-side{
+    .leftside{
         width: 100%;
-        height: 50%;
-    }
-    .img-product{
-        object-fit: cover;
-        margin: 0%;
-        width: 100%;
-        height: 50%;   
+        height: 40vh;
     }
 
-    .right-side{
+    .rightside{
         width:auto;
         padding:2rem;
     }
