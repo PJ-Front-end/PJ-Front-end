@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto Slab', serif;
+}
+.login-title{
+
+    font-family: 'EB Garamond', serif;
+    font-weight: 300;
+    font-size: 2.3rem;
+    color: rgb(193, 110, 33);
+}
+.login-description{
+    font-size: 15px;
+    margin-top: -1px;
+    margin-left: 10px;
+    
+}
+.container-fluid{
+    background-color: hsla(30, 36%, 52%, 0.685);
+}
+.login-content,.login-form,.login-input{
+    display: grid;
+}
+.login-content{
+    position: relative;
+    height: 100vh;
+    align-items: center;
+    margin: 0;
+}
+.login-img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.login-form{
+    position: relative;
+    background-color: hsla(240, 15%, 95%, 0.803);
+    border: solid 2px hsla(255, 17%, 95%, 0.75);
+    padding: 2rem;
+    margin: 1rem;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+}
+.login-label{
+    display: block;
+    margin-bottom: 0.25rem;
+    padding: 0.3rem;
+}
+.name-form{
+    display: flex;
+    column-gap: 0.75rem;
+}
+.login-input{
+    width: 100%;
+    padding: 15px 12px;
+    border-radius: 10px;
+    border: solid 2px black;
+    background-color: hsla(244, 17%, 95%, 0.75);
+    padding-right: 36px;
+}
+.login-input::placeholder{
+    color: rgb(173, 171, 171);
+}
+.password-box{
+    position: relative;
+}
+.login-eye{
+    width: max-content;
+    height: max-content;
+    position:absolute;
+    right: .75rem;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    cursor: pointer;
+}
+.link-account{
+    margin-top: 50px;
+
+}
+.login-btn{
+    width: 100%;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    padding: 10px 0px 10px 0px ;
+    background-color:  hsla(30, 33%, 43%, 0.767);
+    color: aliceblue;
+    border: rgb(243, 239, 231) solid 1px;
+
+}
+
+#signup-btn{
+    background-color: aliceblue;
+    color: hsla(30, 33%, 43%, 0.767);
+    border: hsla(30, 33%, 43%, 0.767) solid 3px;
+
+}
+.btn-from{
+    display: flex;
+    column-gap: 0.75rem;
+    
+}
+/*For small device*/
+@media screen and (max-width:360px) {
+    .btn-from{
+        flex-direction: column;
+    }
+ 
+
+}
+/*For medium device*/
+@media screen and (min-width:576px) {
+    .login-form{
+        width: 500px;
+        justify-self: center;
+    }
+    
+}
+/*For large device*/
+@media screen and (min-width:1064px){
+    .container-fluid{
+        height: 100vh;
+        display: grid;
+        place-items: center;
+    }
+    .login-content{
+        width: 1100px;
+        height: 600px;
+    }
+    .login-form{
+        justify-self: center;
+    }
+    .login-img{
+        border-radius: 2rem;
+    }
+    .login-btn{
+        flex-direction: row;
+    }
+
+}
+
+/* Sign Up page*/
+.login-link{
+    display: grid;
+    place-items: end;
+    color: rgb(56, 34, 5)
+}
+.name-form{
+    display: flex;
+    flex-direction: row;
+}
