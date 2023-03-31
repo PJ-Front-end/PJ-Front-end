@@ -21,7 +21,7 @@ app.use(session({
     saveUninitialized:true,
     cookie:{maxAge:3600000},
     store:MongoStore.create({
-        mongoUrl:'mongodb://52.203.78.54:8089/frontend',
+        mongoUrl:'mongodb://54.144.46.240:8089/frontend',
         dbName : "frontend"
     })
 }))
