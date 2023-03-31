@@ -31,7 +31,7 @@ jobs:
         run: |
           mkdir front-end-pj
           cp docker-compose.yml front-end-pj/docker-compose.yml
-          cd 234-deploylab-frontend
+          cd front-end-pj
           docker-compose -H ${{ secrets.HOST_SERVER }} down
           docker-compose -H ${{ secrets.HOST_SERVER }} pull
           docker-compose -H ${{ secrets.HOST_SERVER }} up -d
