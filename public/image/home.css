@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto Slab', serif;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    margin: 0;
+    background-image: url(../image/cup-coffee.jpg);
+    object-fit: cover;
+    background-position: center;
+    background-size: cover;
+}
+.home-page h1{
+    text-align: center;
+    font-family:'EB Garamond', serif;
+    font-size:5em;
+    background-color: rgba(255, 255, 255, 0.566);
+    margin:0;
+    height: 200px;
+}
+.bakery-items img, .drink-items img{
+width:150px; 
+height:150px; 
+position:relative; 
+padding: 5% 0% 0% 5%;
+border-radius: 50%;
+}
+
+.navbar{
+    width:50%;
+    display: flex;
+    width:100%;
+}
+.navbar img{
+    width: 50%;
+}
+
+.bread, .pastries, .cakes, .coffee, .juicesmoothies, .tea{
+    display: inline-block;
+    text-align: center;
+    color: #000;
+}
+
+.bakery-items, .drink-items{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.566);
+    display:inline-block;
+    margin: 10px 10px 10px 10px;
+    border-radius:25px;
+}
+
+
+.bakery-category, .drinks-category{
+    display: inline-block;
+}
+
+.food-category{
+    margin: 2px 0px 0px 2px;
+}
+
+.bakery-category h2, .drinks-category h2{
+    text-align: justify;
+    color: white
+}
+
+.bakery-category .name, .drinks-category .name{
+    text-decoration: none;
+    color:#000;
+    text-align: center;
+    font-family:'Roboto Slab', serif;
+    font-size:20px;
+}
+
+.food-category .name:hover, .drinks-category .name:hover{
+    color:rgba(214, 140, 70, 0.957);
+}
+
+.food-category .img-opacity:hover, .drinks-category .img-opacity:hover{
+    opacity: 70%;
+}
+/* For small device */
+@media screen and (min-width:350x){
+    .home-page h1{
+        width:100%;
+        min-height: 50vh;
+        height: 100%;
+    }
+    .navbar{
+        margin:0%;
+        padding:0%;
+    }
+    .navbar img, .navbar input[type=text]{
+        margin:0;
+        padding: 0%
+
+    }
+}
+/*For large device*/
+@media screen and (max-width:800x){
+    
+    .home-page h1{
+        width:100%;
+        min-height: 50vh;
+        height: 100%;
+    }
+
+
+    .items{
+        width: 100%;
+        height:100%;
+    }
+    .navbar{
+        margin: 5% 5% 5% 5%;
+        padding: 5% 5% 5% 5%;
+    }
+    .bakery-category, .drinks-category{
+        padding:5% 5% 5% 5%;
+        overflow: hidden;
+        width:100%;
+    }
+
+}
+
+

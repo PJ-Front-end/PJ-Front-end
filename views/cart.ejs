@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Shopping Cart</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+
+    <link href="../public/css/style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-2.2.4.js" charset="utf-8"></script>
+    <meta name="robots" content="noindex,follow" />
+  </head>
+  <body>
+    <div class="main">
+        <form method="POST" action="/cart">
+      <a href=""><i class="ri-home-smile-fill"></i></a>
+      <h1 class="title">MY ORDER</h1>
+      <div class="shopping-cart">
+        <div class="add-item">
+          <p>ORDER</p>
+          <a href="">
+            <p>ADD MORE ITEMS</p>
+            <i class="ri-arrow-right-s-line"></i>
+          </a>
+        </div>
+        <div class="item">
+
+          <div class="image">
+            <img src="/public/image/cakeroll.jpeg" alt="" />
+          </div>
+  
+          <div class="description">
+            <span>Common Projects</span>
+            <span>Bball High</span>
+          </div>
+  
+          <div class="quantity">
+            <button class="plus-btn" type="button" name="button">
+              <img src="plus.svg" alt="" />
+            </button>
+            <input type="text" name="name" value="1">
+            <button class="minus-btn" type="button" name="button">
+              <img src="minus.svg" alt="" />
+            </button>
+          </div>
+  
+          <div class="total-price">$549</div>
+        </div>
+  
+        <!-- Product #2 -->
+        <div class="item">
+          <div class="image">
+            <img src="item-2.png" alt=""/>
+          </div>
+  
+          <div class="description">
+            <span>Maison Margiela</span>
+            <span>Future Sneakers</span>
+          </div>
+  
+          <div class="quantity">
+            <button class="plus-btn" type="button" name="button">
+              <img src="plus.svg" alt="" />
+            </button>
+            <input type="text" name="name" value="1">
+            <button class="minus-btn" type="button" name="button">
+              <img src="minus.svg" alt="" />
+            </button>
+          </div>
+  
+          <div class="total-price">$870</div>
+        </div>
+  
+        <!-- Product #3 -->
+        <div class="item">
+  
+          <div class="description">
+            <span>Total</span>
+          </div>
+  
+          <div class="quantity">
+            
+          </div>
+  
+          <div class="total-price">$349</div>
+        </div>
+        <div class="confirm-btn">
+          <button>Confirm</button>
+        </div>
+      </div> 
+      </form> 
+    </div>
+
+
+
+
+
+
+
+    <script type="text/javascript">
+      $('.minus-btn').on('click', function(e) {
+    		e.preventDefault();
+    		var $this = $(this);
+    		var $input = $this.closest('div').find('input');
+    		var value = parseInt($input.val());
+
+    		if (value > 1) {
+    			value = value - 1;
+    		} else {
+    			value = 0;
+    		}
+
+        $input.val(value);
+
+    	});
+
+    	$('.plus-btn').on('click', function(e) {
+    		e.preventDefault();
+    		var $this = $(this);
+    		var $input = $this.closest('div').find('input');
+    		var value = parseInt($input.val());
+
+    		if (value < 100) {
+      		value = value + 1;
+    		} else {
+    			value =100;
+    		}
+
+    		$input.val(value);
+    	});
+
+      $('.like-btn').on('click', function() {
+        $(this).toggleClass('is-active');
+      });
+    </script>
+  </body>
+</html>

@@ -16,7 +16,7 @@
 <div class="mainscreen">
     <div class="card">
       <div class="leftside">
-        <a href="http://localhost:3000"><i class="ri-arrow-left-s-line"></i></a>
+        <a href="http://localhost:3000/login"><i class="ri-arrow-left-s-line"></i></a>
         <img src=<%= product1.image %> class="product" alt="Shoes" />
       </div>
       <div class="rightside">
@@ -25,12 +25,46 @@
           <h2><%= product1.name %></h2>
           <p><%= product1.description %></p>
           <div class="btn">
-            <p class="amount"><minus> - &nbsp</minus>  1  <plus>&nbsp + </plus></p>
+            <p class="amount"><minus> - &nbsp</minus> <h4 class="num">1</h4>   <plus>&nbsp + </plus></p>
+            <form action="/summary" method="post">
             <button class="buy-btn">Buy Now</button>
+          </form>
           </div>
         </form>
       </div>
     </div>
     </div> 
 </body>
+
+<script>
+const minusBtn = document.querySelector('minus');
+const plusBtn = document.querySelector('plus');
+const num = document.querySelector('.num');
+const buyBtn = document.querySelector('.buy-btn');
+const form = document.querySelector('form');
+
+let quantity = 1;
+
+minusBtn.addEventListener('click', () => {
+  if (quantity > 0) {
+    quantity--;
+    num.innerText = quantity;
+  }
+});
+
+plusBtn.addEventListener('click', () => {
+  quantity++;
+  num.innerText = quantity;
+});
+
+buyBtn.addEventListener('click', () => {
+  history.back();
+});
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  // code to submit form data goes here
+});
+
+</script>
 </html>

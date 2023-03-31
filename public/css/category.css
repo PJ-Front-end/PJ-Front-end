@@ -14,6 +14,10 @@ body{
     line-height: 1.5;
     font-family: var(--Mont);
     background-color: #C8B2A6;
+    background-image: url(../image/cup-coffee.jpg);
+    object-fit: cover;
+    background-position: center;
+    background-size: cover;
     color: #fff;
 }
 .menu{
@@ -85,7 +89,7 @@ img{
 .food-item{
     border-radius: 4px;
     overflow: hidden;
-    background: #fff;
+    background: #ffffffce;
     color: #000;
     margin: 0.6rem 0;
     box-shadow: 0 0 16px -4px rgba(0, 0, 0, 0.75);
