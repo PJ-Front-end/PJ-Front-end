@@ -6,7 +6,7 @@ services:
       - "8087:3000"
     environment:
       - mongodb=mongodb://54.197.77.253:8089/frontend
-  # mongodb:
-  #   image: mongo:latest
-  #   ports:
-  #     - "8089:27017"
+  mongodb:
+    image: mongo:latest
+    ports:
+      - "8089:27017"
