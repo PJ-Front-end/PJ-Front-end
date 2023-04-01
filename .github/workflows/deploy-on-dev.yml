@@ -26,7 +26,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: nureman/frontend:latest
+          tags: nureman/234-deploy-frontend:latest
       - name: prepare the docker-compose run
         run: |
           mkdir front-end-pj
